@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/splash"
+    tools:context="com.vpipl.drdawakhana.Splash_Activity">
+
+   <!-- <ProgressBar
+        android:id="@+id/progressBar2"
+        android:outlineSpotShadowColor="@color/app_color_white"
+        android:outlineAmbientShadowColor="@color/app_color_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="80dp" />-->
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        android:backgroundTint="#fff"
+        android:theme="@style/AppTheme.WhiteAccent"
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="80dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        />
+</FrameLayout>

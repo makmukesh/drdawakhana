@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Color for App Theme -->
+    <color name="colorPrimary">#20B2AA</color>
+    <color name="colorPrimaryDark">#D2F0EE</color>
+
+    <color name="colorAccent">#F7953E</color>
+    <color name="colorLogo">#715022</color>
+    <color name="colorLight">#D2F0EE</color>
+    <color name="colorDark">#205172</color>
+    <color name="companyDark">#205172</color>
+    <color name="companyLight">#D2F0EE</color>
+    <color name="color_666666">#666</color>
+
+    <color name="color_green_text">#FF5c07</color>
+    <color name="app_color_green_one">#FF5c07</color>
+    <color name="color__bg_orange">#FF5c07</color>
+    <color name="color_text_grey">#626262</color>
+    <color name="background_color_text_grey">#eeeeee</color>
+    <color name="color_eeeeee">#eeeeee</color>
+
+
+    <!-- for Bottom sheet color -->
+    <color name="bs_divider_color">#1f000000</color>
+
+    <!-- Color for shadow of button -->
+    <color name="transparent_color">#00000000</color>
+
+    <!-- Color for Apps -->
+    <color name="app_color_white">#FFFFFF</color>
+    <color name="app_color_black">#000000</color>
+    <color name="app_color_red">#D72620</color>
+    <color name="app_color_gray_light">#ECECEC</color>
+    <color name="app_color_gray_dark">#575757</color>
+
+    <color name="color_cccccc">#cccccc</color>
+
+    <color name="iconcolor">#F5B13C</color>
+    <color name="color20B1AA">#20B1AA</color>
+</resources>

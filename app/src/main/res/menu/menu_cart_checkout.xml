@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:myapp="http://schemas.android.com/apk/res-auto"
+    app:ignore="NamespaceTypo">
+
+    <item
+        android:id="@+id/menu_Login"
+        android:icon="@drawable/ic_icon_user"
+        android:title="Login"
+        android:visible="false"
+        app:ignore="HardcodedText"
+        myapp:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_clearAll"
+        android:icon="@drawable/ic_menu_cart_empty"
+        android:title="Clear All"
+        android:visible="false"
+        app:ignore="HardcodedText"
+        myapp:showAsAction="always" />
+</menu>

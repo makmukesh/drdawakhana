@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/bg_round_rectangle_home"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:elevation="1dp"
+                        app:popupTheme="@style/AppTheme.PopupOverlay"
+                        app:titleTextColor="#fff">
+
+                    </androidx.appcompat.widget.Toolbar>
+
+                    <ImageView
+                        android:id="@+id/test"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_app_logo"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/notification"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ru.nikartm.support.ImageBadgeView
+                            android:id="@+id/ibv_noticount"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_notifications"
+                            app:ibv_badgeColor="@android:color/holo_red_dark"
+                            app:ibv_badgeLimitValue="false"
+                            app:ibv_badgeTextColor="#ffffff"
+                            app:ibv_badgeTextSize="8sp"
+                            app:ibv_badgeTextStyle="bold"
+                            app:ibv_fixedBadgeRadius="7dp" />
+                        <!-- <ImageView
+                             android:layout_width="25dp"
+                             android:layout_height="25dp"
+                             app:srcCompat="@drawable/ic_notifications"
+                             />-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/logout"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/notification"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            app:srcCompat="@drawable/ic_power_settings_new_black_24dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/app_name"
+                    android:textColor="#215073"
+                    android:textSize="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rel1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="50dp"
+                        android:background="@drawable/rounded">
+
+                        <ImageView
+                            android:id="@+id/img_search"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            app:srcCompat="@drawable/ic_search">
+
+                        </ImageView>
+
+                        <EditText
+                            android:id="@+id/et_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_toRightOf="@+id/img_search"
+                            android:background="@null"
+                            android:cursorVisible="true"
+                            android:fontFamily="@font/opensans_regular"
+                            android:hint="Search Here"
+                            android:imeOptions="actionSearch"
+                            android:inputType="text"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#3C3F41"
+                            android:textColorHint="#000"
+                            android:textSize="14sp"
+                            android:windowSoftInputMode="stateHidden"
+                            tools:ignore="Deprecated" />
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ask"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@drawable/ic_voice_recorder">
+
+                        </ImageView>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-- <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_gravity="center_vertical"
+                 android:maxHeight="40dp"
+                 android:background="#FA69CA35"
+                 android:orientation="horizontal"
+                 android:minHeight="40dp">
+                 <ImageView
+                     android:id="@+id/img_search"
+                     android:layout_width="40dp"
+                     android:layout_height="match_parent"
+                     android:adjustViewBounds="true"
+                     android:background="#5D3D1A"
+                     android:paddingBottom="5dp"
+                     android:paddingTop="5dp"
+                     android:scaleType="fitCenter"
+                     android:src="@drawable/icon_search" />
+                 <EditText
+                     android:id="@+id/et_search"
+                     android:layout_width="match_parent"
+                     android:layout_height="40dp"
+                     android:background="@android:color/transparent"
+                     android:cursorVisible="true"
+                     android:fontFamily="@font/opensans_regular"
+                     android:hint="@string/hint_et_search"
+                     android:imeOptions="actionSearch"
+                     android:inputType="text"
+                     android:paddingLeft="10dp"
+                     android:singleLine="true"
+                     android:textAppearance="?android:attr/textAppearanceMedium"
+                     android:textColor="@android:color/white"
+                     android:textColorHint="@color/app_color_white"
+                     android:textSize="14sp"
+                     android:windowSoftInputMode="stateHidden"
+                     tools:ignore="Deprecated" />
+
+             </LinearLayout>-->
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="Category"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/noti_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                android:scrollbars="none">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/LLFruitsProducts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txt_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/opensans_regular"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="Category"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_view_all_fruits"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/round_rectangle_orange"
+                    android:fontFamily="@font/opensans_regular"
+                    android:minHeight="30dp"
+                    android:text="View All"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:scrollbars="none">
+
+                <LinearLayout
+
+                    android:id="@+id/LLFruits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="10dp" />
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#fff" />
+
+            <LinearLayout
+                android:id="@+id/LLVegatablesProducts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txt_2"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/opensans_regular"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_view_all_vegatables"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/round_rectangle_orange"
+                    android:fontFamily="@font/opensans_regular"
+                    android:minHeight="30dp"
+                    android:text="View All"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:visibility="visible">
+
+                <LinearLayout
+
+                    android:id="@+id/LLvegatables"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone" />
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:fitsSystemWindows="true" />
+
+                <com.vpipl.drdawakhana.Utils.CirclePageIndicator
+                    android:id="@+id/imagePageIndicator"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:padding="6dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_round_rectangle_green"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/free_delivery_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Free Home Delivery"
+            android:textColor="@color/app_color_white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

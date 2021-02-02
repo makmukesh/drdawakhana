@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vpipl.drdawakhana">
+
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="AppController"
+        android:allowBackup="true"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+        <activity
+            android:name="Splash_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="Login_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            />
+
+        <activity
+            android:name="Register_User_Activity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            />
+
+        <!--<activity-->
+        <!--android:name=".Login_Activity"-->
+        <!--android:configChanges="keyboard|keyboardHidden|orientation|screenSize"-->
+        <!--android:screenOrientation="portrait" />-->
+
+        <activity
+            android:name="ForgotPassword_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+             />
+
+        <activity
+            android:name="HomeDashboard_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="ContactUs_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            />
+
+        <activity
+            android:name="ViewProfile_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            />
+
+        <activity
+            android:name="ChangePassword_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+
+        <activity
+            android:name="UpdateProfile_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            />
+
+        <activity
+            android:name="MyOrders_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+             />
+
+        <activity
+            android:name="ProductListGrid_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            />
+
+        <activity
+            android:name="SearchProducts_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            />
+
+        <activity
+            android:name="ProductDetail_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+           />
+
+        <activity
+            android:name="AddCartCheckOut_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+          />
+
+        <activity
+            android:name="CheckoutToPay_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            />
+
+        <activity
+            android:name="MyOrdersDetails_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+           />
+
+        <activity
+            android:name="ThanksScreen_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            />
+        <activity
+            android:name="Inbox_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+           />
+        <activity
+            android:name="WelcomeActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+           />
+        <activity
+            android:name="FeedbackActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+           />
+
+        <activity
+            android:name="HomeDashboard_old_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+           />
+
+        <activity
+            android:name="Welcome_Notification_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+           />
+        <activity
+            android:name="CategoryMainListActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+           />
+        <activity
+            android:name="CategoryLevel1ListActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+           />
+        <activity
+            android:name="CategoryLevel2ListActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+           />
+        <activity
+            android:name="Wishlist_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+           />
+        <activity
+            android:name="MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+           />
+        <activity
+            android:name="AddDeliveryAddress_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+           />
+        <activity
+            android:name="ChangeDeliveryAddress_Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+           />
+        <activity
+            android:name="PackageListActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+           />
+        <activity
+            android:name="PackagePurchaseActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+           />
+        <activity
+            android:name="PackagePurchaseResponseActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+           />
+
+        <receiver android:name=".SMS.MySMSBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- starts of GCM -->
+
+        <!-- Firebase Notifications -->
+        <service android:name=".firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".firebase.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- Firebase Notifications -->
+
+    </application>
+</manifest>

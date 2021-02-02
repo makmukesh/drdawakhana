@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:id="@+id/rel21"
+        android:background="#fff"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/footer"
+            android:layout_below="@+id/header">
+
+            <include
+                layout="@layout/layout_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/footer"
+            android:layout_alignParentBottom="true">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e4e4e4"
+                android:layout_alignParentTop="true"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="4"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:id="@+id/home"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_home"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:text="Home"
+                        android:textSize="12dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/myorder"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_news"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:text="History"
+                        android:textSize="12dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/cart"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                <!--    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_cart"/>-->
+
+                    <ru.nikartm.support.ImageBadgeView
+                        android:id="@+id/ibv_cartcount"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        app:ibv_badgeTextSize="8sp"
+                        app:ibv_fixedBadgeRadius="7dp"
+                        app:ibv_badgeTextStyle="bold"
+                        app:ibv_badgeValue="5"
+                        app:ibv_badgeTextColor="#ffffff"
+                        app:ibv_badgePosition="top_right"
+                        app:ibv_badgeColor="@android:color/holo_red_dark"
+                        app:ibv_badgeLimitValue="false"
+                        android:src="@drawable/ic_cart" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:text="Cart"
+                        android:textSize="12dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/profile_me"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_user"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:text="Me"
+                        android:textSize="12dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:background="#D2F0EE"
+        app:headerLayout="@layout/nav_header_home">
+
+        <ExpandableListView
+            android:id="@+id/left_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="70dp"
+            android:childDivider="#eeeeee"
+            android:divider="#eeeeee"
+            android:dividerHeight="1dp"
+            android:groupIndicator="@null"
+            android:smoothScrollbar="true" />
+
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

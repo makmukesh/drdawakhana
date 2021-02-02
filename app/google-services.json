@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "176487863892",
+    "firebase_url": "https://drdawakhana.firebaseio.com",
+    "project_id": "drdawakhana",
+    "storage_bucket": "drdawakhana.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176487863892:android:99092377e1ff3c98cb7fc1",
+        "android_client_info": {
+          "package_name": "com.vpipl.drdawakhana"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "176487863892-m23opcbfg28kjfrrsuq2vetlchlh93m3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYRO-Zd7UoomaCQNPH885lFUQmhgdXrVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "176487863892-m23opcbfg28kjfrrsuq2vetlchlh93m3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

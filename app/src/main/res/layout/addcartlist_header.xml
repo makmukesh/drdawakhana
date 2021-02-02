@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:padding="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:adjustViewBounds="true"
+            android:paddingLeft="5dp"
+            android:layout_gravity="start"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:scaleType="fitEnd"
+            app:srcCompat="@drawable/ic_icon_loca"
+            android:tint="@color/companyDark"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight=".5"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center|start"
+            android:paddingBottom="5dp"
+            android:paddingTop="8dp"
+            android:text="Delivery Address"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/companyDark"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/txt_addressChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_vertical|right"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="Change"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/companyDark"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_bottom_dop_shadow_home_color"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_vertical"
+            android:paddingEnd="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingStart="5dp"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/app_color_black"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="14sp"
+            tools:ignore="Deprecated" />
+
+        <TextView
+            android:id="@+id/txt_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="4sp"
+            android:maxLines="4"
+            android:textColor="@color/app_color_black"
+            android:paddingEnd="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingStart="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txt_mobNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_vertical"
+            android:paddingEnd="5dp"
+            android:paddingLeft="5dp"
+            android:textColor="@color/app_color_black"
+            android:paddingRight="5dp"
+            android:paddingStart="5dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="gone"
+            tools:ignore="Deprecated" />
+
+    </LinearLayout>
+
+</LinearLayout>

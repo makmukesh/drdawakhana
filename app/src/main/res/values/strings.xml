@@ -1,0 +1,121 @@
+<resources>
+    <string name="app_name">Dr. Dawakhana</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+
+    <string name="gcm_senderId">287033387847</string>
+
+    <!--contact us-->
+    <string name="contact_email">test@gmail.com</string>
+    <string name="contact_website">www.hanseaassure.com</string>
+
+    <!--default Message string-->
+    <string name="txt_submit">Submit</string>
+    <string name="txt_yes">Yes</string>
+    <string name="txt_no">No</string>
+    <string name="Rs">\u20B9</string>
+    <string name="txt_networkAlert">No Network Connectivity</string>
+    <string name="txt_exception">Sorry, There seems to be a problem. Try again later</string>
+
+    <!--default Message string-->
+    <string name="error_required_mobile_number">Please Enter mobile number.</string>
+    <string name="error_invalid_mobile_number">Invalid Mobile Number.</string>
+    <string name="error_field_required">This Field is required.</string>
+    <string name="error_et_userEmail">Invalid Email Address.</string>
+    <string name="error_et_userMobileNumber">Invalid Mobile Number.</string>
+    <string name="error_et_userPostCode">Invalid Pin Code.</string>
+
+    <!-- Strings related to Verification Screen -->
+    <string name="txt_verification_message">Please Login to Continue</string>
+
+    <!-- Strings related to login -->
+    <string name="txt_loginForgetpassword">Forgot password?</string>
+    <string name="cb_login_rememberMe">Remember me</string>
+    <string name="txt_joinNow">Not joined ? Join Now !</string>
+    <string name="txt_note">Password will be sent to your registered Mobile Number.</string>
+
+    <!-- Strings related to Profile -->
+    <string name="txt_email">Email ID</string>
+    <string name="txt_city">City</string>
+    <string name="txt_state">State</string>
+    <string name="txt_country">Country</string>
+
+    <!--Strings Related to InputType Digits-->
+    <string name="numberic">0123456789</string>
+
+    <!--strings related to change password-->
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="error_required_old_password">Please Enter Old Password.</string>
+    <string name="error_required_not_old_password">Old Password Not Matched.</string>
+    <string name="error_required_new_password">Please Enter New Password.</string>
+    <string name="error_required_confirm_password">Please Enter Confirm Password.</string>
+    <string name="password_mismatch">Confirm Password &amp; New Password should be same.</string>
+    <string name="error_required_password">Please Enter Password.</string>
+    <string name="error_invalid_email">Invalid Email Address.</string>
+    <string name="error_et_mr_PINno">Invalid PIN code.</string>
+    <string name="contact_detail">Contact Detail</string>
+    <string name="address">Address</string>
+    <string name="mobile">Mobile Number</string>
+    <string name="hint_et_city">Enter City</string>
+    <string name="hint_txt_pinCode">Pin Code</string>
+    <string name="hint_et_pinCode">Enter Pin Code</string>
+    <string name="hint_et_search">What are you looking for ?</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GET STARTED</string>
+
+    <string name="slide_1_title">Express yourself !</string>
+    <!-- <string name="slide_1_desc">Basics,Tutorials ,Chords and Songs</string>-->
+    <string name="slide_1_desc">Someone told me the smile on my face gets bigger when I play the guitar.</string>
+
+    <string name="slide_2_title">Think Different</string>
+    <string name="slide_2_desc">Music is a necessity. After food, air, water and warmth, music is the next necessity of life.</string>
+
+    <string name="slide_3_title">Believe in the Best</string>
+    <string name="slide_3_desc">My guitar is not a thing. It is an extension of myself. It is who I am.</string>
+
+    <!-- Screens background color-->
+    <color name="bg_screen1">#f64c73</color>
+    <color name="bg_screen2">#20d2bb</color>
+    <color name="bg_screen3">#3395ff</color>
+    <color name="bg_screen4">#c873f4</color>
+    <color name="bg_screen5">#6d109e</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#4CAF50</color>
+    <color name="dot_dark_screen2">#4CAF50</color>
+    <color name="dot_dark_screen3">#4CAF50</color>
+    <color name="dot_dark_screen4">#4CAF50</color>
+    <color name="dot_dark_screen5">#4CAF50</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#000000</color>
+    <color name="dot_light_screen2">#000000</color>
+    <color name="dot_light_screen3">#000000</color>
+    <color name="dot_light_screen4">#000000</color>
+    <color name="dot_light_screen5">#000000</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+        <item>@color/dot_light_screen5</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+        <item>@color/dot_dark_screen5</item>
+    </array>
+
+    <!-- logout message -->
+    <string name="txt_signout_message">Are you sure you want to logout ?</string>
+    <string name="txt_signout_yes">Yes</string>
+    <string name="txt_signout_no">No</string>
+</resources>

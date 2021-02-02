@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsv_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:background="#fff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:background="@drawable/bg_round_rectangle_home"
+                        android:orientation="vertical"
+                        tools:ignore="MissingConstraints">
+
+                        <androidx.appcompat.widget.Toolbar
+                            android:id="@+id/toolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="90dp"
+                            android:theme="@style/AppTheme.AppBarOverlay"
+                            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="90dp"
+                                android:layout_marginLeft="-20dp"
+                                android:gravity="center|start">
+
+                                <TextView
+                                    android:id="@+id/txt_department"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_toRightOf="@+id/user_profile"
+                                    android:gravity="start|center"
+                                    android:text="Android Developer"
+                                    android:textColor="#fff"
+                                    android:textSize="12dp"
+                                    android:visibility="gone" />
+
+                                <com.vpipl.drdawakhana.Utils.CircularImageView
+                                    android:id="@+id/user_profile"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/bg_circle"
+                                    android:contentDescription="@string/app_name"
+                                    android:padding="2dp"
+                                    android:src="@mipmap/ic_launcher_round" />
+
+                            </RelativeLayout>
+
+                        </androidx.appcompat.widget.Toolbar>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="90dp"
+                        android:orientation="vertical"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/user_profile"
+                            android:gravity="center|left"
+                            android:text="Welcome to "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="#205172"
+                            android:textSize="16dp"
+                            android:textStyle="normal"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/txt_home_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/user_profile"
+                            android:gravity="center|left"
+                            android:text="@string/app_name"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="#205172"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/rel1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="50dp"
+                                android:background="@drawable/rounded">
+
+                                <ImageView
+                                    android:id="@+id/img_search"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="15dp"
+                                    app:srcCompat="@drawable/ic_search">
+
+                                </ImageView>
+
+                                <EditText
+                                    android:id="@+id/et_search"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="30dp"
+                                    android:layout_toRightOf="@+id/img_search"
+                                    android:background="@null"
+                                    android:cursorVisible="true"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:hint="Search Here"
+                                    android:imeOptions="actionSearch"
+                                    android:inputType="text"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#3C3F41"
+                                    android:textColorHint="#000"
+                                    android:textSize="14sp"
+                                    android:windowSoftInputMode="stateHidden"
+                                    tools:ignore="Deprecated" />
+
+                            </RelativeLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/ask"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_centerHorizontal="true"
+                                    app:srcCompat="@drawable/ic_voice_recorder">
+
+                                </ImageView>
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_cate_data_found"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_category_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@null"
+                            android:scrollbarStyle="outsideOverlay"
+                            android:scrollbars="none" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_top_products_data_found"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Top Products"
+                            android:textColor="@color/colorDark"
+                            android:textStyle="bold" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_top_product_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:divider="@null"
+                            android:scrollbarStyle="outsideOverlay"
+                            android:scrollbars="none" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_best_selling_data_found"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Best Selling Products"
+                            android:textColor="@color/colorDark"
+                            android:textStyle="bold" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_best_selling_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:divider="@null"
+                            android:scrollbarStyle="outsideOverlay"
+                            android:scrollbars="none" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_deals_offers_data_found"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deals &amp; Offers"
+                            android:textColor="@color/colorDark"
+                            android:textStyle="bold"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/banner2"
+                            android:visibility="gone" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="40dp"
+                            app:cardCornerRadius="10dp">
+
+                            <com.smarteist.autoimageslider.SliderView
+                                android:id="@+id/imageSlider"
+                                android:layout_width="match_parent"
+                                android:layout_height="160dp"
+                                app:sliderAnimationDuration="600"
+                                app:sliderAutoCycleDirection="back_and_forth"
+                                app:sliderAutoCycleEnabled="true"
+                                app:sliderIndicatorAnimationDuration="600"
+                                app:sliderIndicatorGravity="center_horizontal|bottom"
+                                app:sliderIndicatorMargin="15dp"
+                                app:sliderIndicatorOrientation="horizontal"
+                                app:sliderIndicatorPadding="3dp"
+                                app:sliderIndicatorRadius="2dp"
+                                app:sliderIndicatorSelectedColor="@color/companyDark"
+                                app:sliderIndicatorUnselectedColor="#D2F0EE"
+                                app:sliderScrollTimeInSec="1"
+                                app:sliderStartAutoCycle="true" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent">
+
+            <include
+                layout="@layout/bottom_new_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

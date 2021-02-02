@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".ViewProfile_Activity">
+
+    <LinearLayout
+        android:id="@+id/ll_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_round_rectangle_toolbar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:maxHeight="80dp"
+                    android:minHeight="80dp"
+                    android:paddingStart="00dp"
+                    android:paddingLeft="00dp"
+                    android:paddingEnd="00dp"
+                    android:paddingRight="00dp"
+                    android:theme="?attr/actionBarTheme"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetStart="0dp"
+                    app:contentInsetStartWithNavigation="0dp"
+                    app:theme="@style/ToolBarStyle">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="top"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="50dp"
+                            android:id="@+id/img_nav_back"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/ic_back_" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="100dp"
+                            android:gravity="start|center"
+                            android:padding="5dp"
+                            android:text="Category List"
+                            android:textColor="#205172"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+         <!--   <TextView android:fontFamily="@font/opensans_regular"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:background="@color/app_color_white"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="View Profile"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/app_color_black"
+                tools:ignore="Deprecated,HardcodedText" />-->
+
+           <!-- <TextView android:fontFamily="@font/opensans_regular"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/background_color_text_grey"
+                android:padding="10dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:layout_gravity="center"
+                android:text="View Profile"
+                android:textColor="@android:color/black"
+                />
+-->
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f4f4f4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight=".7"
+                android:background="@drawable/bg_edittext"
+                android:orientation="vertical">
+
+
+                <!--Personal-->
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Personal Detail"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/txt_userName"
+                    android:singleLine="true"
+                    android:gravity="center|left"
+                    android:fontFamily="@font/opensans_regular"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="text"
+                    android:textSize="14dp"
+                    android:maxLength="20"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+<!--
+                <TextView android:fontFamily="@font/opensans_regular"
+                    android:id="@+id/txt_userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:visibility="visible" />-->
+
+
+                <!--Contact-->
+             <!--   <TextView android:fontFamily="@font/opensans_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/background_color_text_grey"
+                    android:padding="10dp"
+                    android:text="@string/contact_detail"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact_detail"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"/>
+
+              <!--  <TextView android:fontFamily="@font/opensans_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mobile"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="visible" />-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mobile"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    />
+
+              <!--  <TextView android:fontFamily="@font/opensans_regular"
+                    android:id="@+id/txt_mobileNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:visibility="visible" />-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/txt_mobileNo"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:fontFamily="@font/opensans_regular"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="text"
+                    android:textSize="14dp"
+                    android:maxLength="20"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+
+                <TextView android:fontFamily="@font/opensans_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_email"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="gone" />
+
+                <TextView android:fontFamily="@font/opensans_regular"
+                    android:id="@+id/txt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+               <!-- <TextView android:fontFamily="@font/opensans_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="visible" />-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"/>
+
+                <!--<TextView android:fontFamily="@font/opensans_regular"
+                    android:id="@+id/txt_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:visibility="visible" />-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/txt_address"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:fontFamily="@font/opensans_regular"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="text"
+                    android:textSize="14dp"
+                    android:maxLength="20"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+
+               <!-- <TextView android:fontFamily="@font/opensans_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_city"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="visible" />-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_city"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"/>
+
+               <!-- <TextView android:fontFamily="@font/opensans_regular"
+                    android:id="@+id/txt_city"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:visibility="visible" />-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/txt_city"
+                    android:singleLine="true"
+                    android:gravity="center|left"
+                    android:fontFamily="@font/opensans_regular"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="text"
+                    android:textSize="14dp"
+                    android:maxLength="20"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+
+              <!--  <TextView android:fontFamily="@font/opensans_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_state"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="visible" />-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_state"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"/>
+
+                <!--<TextView android:fontFamily="@font/opensans_regular"
+                    android:id="@+id/txt_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:visibility="visible" />-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/txt_state"
+                    android:singleLine="true"
+                    android:gravity="center|left"
+                    android:fontFamily="@font/opensans_regular"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="text"
+                    android:textSize="14dp"
+                    android:maxLength="20"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+
+              <!--  <TextView android:fontFamily="@font/opensans_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_country"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="visible" />-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_country"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"/>
+
+               <!-- <TextView android:fontFamily="@font/opensans_regular"
+                    android:id="@+id/txt_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:visibility="visible" />-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/txt_country"
+                    android:singleLine="true"
+                    android:fontFamily="@font/opensans_regular"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="text"
+                    android:textSize="14dp"
+                    android:gravity="center|left"
+                    android:maxLength="20"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+
+               <!-- <TextView android:fontFamily="@font/opensans_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_txt_pinCode"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="visible" />-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_txt_pinCode"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"/>
+
+               <!-- <TextView android:fontFamily="@font/opensans_regular"
+                    android:id="@+id/txt_postCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:visibility="visible" />-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/txt_postCode"
+                    android:singleLine="true"
+                    android:fontFamily="@font/opensans_regular"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="text"
+                    android:textSize="14dp"
+                    android:gravity="center|left"
+                    android:maxLength="20"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+
+
+                <!--Nominee-->
+
+
+                <Button android:fontFamily="@font/opensans_regular"
+                    android:id="@+id/btn_updateMyProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/btn_backgroung"
+                    android:focusableInTouchMode="false"
+                    android:text="Update Profile"
+                    android:layout_margin="10dp"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

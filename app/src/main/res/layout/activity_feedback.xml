@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/colorPrimary">
+
+                <RelativeLayout
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/ll_back"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="start">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_close" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="Send us your feedback!"
+                        android:textColor="@color/app_color_white"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_title"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="Do you have a suggestion or found some bug ?\n
+let us know in the field below"
+                        android:textColor="@color/app_color_white"
+                        android:textSize="12dp"
+                        android:textStyle="normal" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="@color/app_color_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="How was your experience ?"
+                    android:textColor="@color/app_color_black"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_smile"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="10dp"
+                        android:checked="true"
+                        android:src="@drawable/ic_feed_smiling_active"
+                        android:visibility="visible"
+                        tools:ignore="HardcodedText,MissingPrefix" />
+                    <!--app:drawableType="selector"
+                    app:selectorStateNormal="@color/blue_light"
+                    app:selectorStatePressed="@color/blue_dark"-->
+                    <ImageView
+                        android:id="@+id/iv_sad"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_feed_sad_deactive"
+                        android:visibility="visible"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/iv_confused"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_feed_confused_deactive"
+                        android:visibility="visible"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:elevation="3dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="#eee">
+
+                        <EditText
+                            android:id="@+id/edtxt_feedback"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#eee"
+                            android:gravity="start"
+                            android:hint="Describe your experiance here ..."
+                            android:inputType="textMultiLine"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textColor="@color/app_color_black"
+                            android:textSize="15dp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <RadioGroup
+                    android:id="@+id/rg_view_detail_for"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <RadioButton
+                        android:id="@+id/rb_bug"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:text="Bug"
+                        android:textColor="#666666"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        tools:ignore="HardcodedText" />
+
+                    <RadioButton
+                        android:id="@+id/rb_suggestion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:text="Suggestion"
+                        android:textColor="#666666"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        tools:ignore="HardcodedText" />
+
+                    <RadioButton
+                        android:id="@+id/rb_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:text="Other"
+                        android:textColor="#666666"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        tools:ignore="HardcodedText" />
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:id="@+id/rl_login_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/btn_backgroung"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:text="Send Feedback"
+                        android:textAllCaps="true"
+                        android:textColor="@color/app_color_white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
